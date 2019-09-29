@@ -133,7 +133,7 @@ func copyFiles(srcDir string, destDir string, FileLists map[string]string){
             fmt.Println(err.Error())
             continue
         }
-        defer srcFile.Close()
-        defer destFile.Close()
+	srcFile.Close()
+	destFile.Close()
     }
 }
